@@ -47,12 +47,12 @@ num_pixels = x_train.shape[1] * x_train.shape[2]
 # create model
 model = Sequential()
 
-# 2 sets of CRP (Convolution, RELU, Pooling)
-#model.add(Conv2D(20, (5, 5),
- #                padding = "same", 
- #               input_shape = input_shape))
-#model.add(Activation("relu"))
-#model.add(MaxPooling2D(pool_size = (2, 2), strides = (2, 2)))
+
+
+
+
+
+
 
 model.add(Conv2D(50, (5, 5),
                  padding = "same"))
@@ -77,7 +77,7 @@ model.compile(loss = 'categorical_crossentropy',
 
 # Training Parameters
 batch_size = 128
-epochs = 3
+epochs =  3
 
 history = model.fit(x_train, y_train,
           batch_size=batch_size,
